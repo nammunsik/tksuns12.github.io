@@ -6,11 +6,10 @@ permalink: ":title/"
 baseurl: "https://tksuns12.github.io" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
-logo: "/assets/logo.png"
 
 # Author Settings
 author: 강현길 # add your name
-author-img: # add your photo
+author-img: "/assets/logo.png"
 about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
