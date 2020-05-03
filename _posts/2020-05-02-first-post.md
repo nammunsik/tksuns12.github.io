@@ -9,4 +9,3 @@ categories: 잡담
 void main() {
 print("Hello, my blog!");}
 ```
-
