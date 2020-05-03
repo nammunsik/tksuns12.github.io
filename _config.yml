@@ -11,16 +11,16 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme: "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale: "ko"
-title: "크림슨풋의 개발 성장기 블로그"
+title: "강현길의 개발 성장기 블로그"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "강현길"
-description: "An amazing website."
+description: "강현길의 블로그"
 url: "https://tksuns12.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -94,7 +94,7 @@ analytics:
 author:
   name: "강현길"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "I am an **amazing** person."
+  bio: "심리학 전공, 컴공은 융합전공으로 하고 있는 반전공자 초짜 개발자입니다.""
   location: "Daegu, Republic of Korea"
   email: tksuns@gmail.com
   links:
