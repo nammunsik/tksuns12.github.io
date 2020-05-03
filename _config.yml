@@ -32,7 +32,7 @@ words_per_minute: 200
 comments:
   provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname: "tksuns12-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: tksuns12-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -51,9 +51,9 @@ reCaptcha:
   secret:
 atom_feed:
   path: # blank (default) uses feed.xml
-search: # true, false (default)
-search_full_content: # true, false (default)
-search_provider: # lunr (default), algolia, google
+search: true
+search_full_content: true
+search_provider: google
 algolia:
   application_id: # YOUR_APPLICATION_ID
   index_name: # YOUR_INDEX_NAME
@@ -92,10 +92,10 @@ analytics:
 
 # Site Author
 author:
-  name: "Your Name"
+  name: "강현길"
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "I am an **amazing** person."
-  location: "Somewhere"
+  location: "Daegu, Republic of Korea"
   email:
   links:
     - label: "Email"
