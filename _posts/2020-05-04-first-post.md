@@ -1,7 +1,7 @@
 ---
 title: "(TIL) C++"
 date: 2020-05-04 12:54:24 -0400
-categories: DataStructure
+categories: DataStructure TIL
 ---
 
 김포프님께서 말씀하셨다, 모름지기 프로그래머라면 Managed Language 하나와 Unmanaged Language 하나 정도는 다룰 줄 알아야 한다고. 무슨 말인지 알 것 같은 게 나는 머신러닝 공부 때문에 Python을 가장 먼저 배웠는데 사실 Python이 익숙해지고 나니 Java, Javascript, C#(이 놈은 특히 Java와 너무 비슷해서 Android로 수업 프로젝트를 하다가 배우기가 참 수월했다.), Dart 같은 언어들을 차례로 배우기 굉장히 쉬웠다. 그러나 Unmanaged Language라고는 기초 프로그래밍 수업 시간에 배운 C가 전부여서 사실 잘 다룬다고 말하기도 어렵다. (그래도 그 수업 내에서는 내가 가장 잘 다뤘다.)
