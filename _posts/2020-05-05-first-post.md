@@ -1,7 +1,7 @@
 ---
 title: "(TIL) C++ 자료구조 알고리즘 2일차"
 date: "2020-05-05 "
-category: DataStructure TIL
+category: [DataStructure, TIL]
 ---
 
 ## friend 키워드

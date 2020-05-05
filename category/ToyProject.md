@@ -2,6 +2,6 @@
 
 layout: category
 
-title: 토이프로젝트
+title: ToyProject
 
 ---

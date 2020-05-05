@@ -1,7 +1,7 @@
 ---
 title: "[So.SSul]Flutter에서 await를 initState 함수 내에서 사용하기"
 date: 2020-05-04 17:33:13 -0400
-categories: 토이프로젝트
+categories: [ToyProject]
 ---
 
 Flutter에서 코딩을 하다보면 위젯이 build 되기 전에 로컬데이터를 불러와야 하는 경우가 있다. 그냥 위젯을 하나 더 만들어서 데이터를 불러오는 용도로 사용하고 그에 맞춰 Route를 설정해주면 되긴 하나 위젯을 또 하나 더 만들게 되면 리소스를 많이 잡아먹을 것 같아 Stateful 위젯의 initState() 함수 내에서 로컬 데이터를 불러오고 싶었다.
