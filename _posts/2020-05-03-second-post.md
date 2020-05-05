@@ -1,7 +1,12 @@
 ---
 title: "[So.SSul]Firebase의 데이터 모델 살펴보기"
 date: 2020-05-02 21:22:34 -0400
-categories: [ToyProject]
+categories: 
+  - Project
+
+tags:
+  - Project
+  - Firebase
 ---
 
 -----------------------------
