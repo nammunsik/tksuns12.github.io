@@ -1,11 +1,11 @@
 # main links
 main:
   - title: "Home"
-     url: https://tksuns12.github.com
-   - title: "About"
-     url: /about/
-   - title: "Category"
-     url: /categories/
+    url: https://tksuns12.github.com
+  - title: "About"
+    url: /about/
+  - title: "Category"
+    url: /categories/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
