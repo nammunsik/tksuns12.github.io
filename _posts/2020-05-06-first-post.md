@@ -1,0 +1,147 @@
+---
+title: "(TIL) C++ 배열"
+last_modified_at: 2020-05-06T11:15:30-05:00
+category: 
+    - TIL
+tags:
+    - TIL
+    - C++
+    - Data Structure
+---
+
+오늘부터 본격적으로 C++로 자료구조에 대해서 배워본다. 모든 코드는 [이 책](http://www.sso.sy/sites/default/files/data-structures-and-algorithms-in-c.pdf)에 있는 것을 그대로 들고온 것이다.
+
+# C++ 배열 사용하기
+
+먼저 게임 점수와 이름을 멤버 변수로 가진 클래스를 정의한다.
+
+```c++
+class GameEntry { // a game score entry
+public:
+GameEntry(const string& n="", int s=0); // constructor
+string getName() const; // get player name
+int getScore() const; // get score
+private:
+string name; // player’s name
+int score; // player’s score
+};
+
+GameEntry::GameEntry(const string& n, int s) // constructor
+: name(n), score(s) { }
+// accessors
+string GameEntry::getName() const { return name; }
+int GameEntry::getScore() const { return score; }
+```
+
+그리고 엔트리를 저장할 수 있는 클래스를 정의한다.
+
+```c++
+class Scores { // stores game high scores
+public:
+Scores(int maxEnt = 10); // constructor
+˜Scores(); // destructor
+void add(const GameEntry& e); // add a game entry
+GameEntry remove(int i) // remove the ith entry
+throw(IndexOutOfBounds);
+private:
+int maxEntries; // maximum number of entries
+int numEntries; // actual number of entries
+GameEntry* entries; // array of game entries
+};
+
+Scores::Scores(int maxEnt) { // constructor
+maxEntries = maxEnt; // save the max size
+entries = new GameEntry[maxEntries]; // allocate array storage
+numEntries = 0; // initially no elements
+}
+Scores::˜Scores() { // destructor
+delete[ ] entries;
+}
+```
+
+이제 준비가 끝났다. 먼저 배열 자료구조에 자료를 어떻게 저장하는지 살펴보자.
+
+## 삽입(Insertion)
+
+```c++
+void Scores::add(const GameEntry& e) { // add a game entry
+int newScore = e.getScore(); // score to add
+if (numEntries == maxEntries) { // the array is full
+if (newScore <= entries[maxEntries−1].getScore())
+return; // not high enough - ignore
+}
+else numEntries++; // if not full, one more entry
+int i = numEntries−2; // start with the next to last
+while ( i >= 0 && newScore > entries[i].getScore() ) {
+entries[i+1] = entries[i]; // shift right if smaller
+i−−;
+}
+entries[i+1] = e; // put e in the empty spot
+}
+```
+
+코드를 살펴보면 이런 순서로 코드가 진행됨을 알 수 있다.
+
+1. 배열이 꽉 찼는지 확인한다. - 지금 저장되어 있는 데이터의 수가 배열의 크기와 같은지 확인한다.
+2. 배열의 맨 마지막 원소부터 하나씩 인덱스를 줄여가며 새로 삽입할 점수가 지금 탐색 중인 점수보다 크면 그 점수의 인덱스를 하나 증가시킨다.(오른쪽으로 민다.) 왜 이런 식으로 하냐면 이 배열은 점수가 내림차순으로 정렬된 배열이기 때문이다.
+
+## 삭제(removal)
+
+```c++
+GameEntry Scores::remove(int i) throw(IndexOutOfBounds) {
+if ((i < 0) | | (i >= numEntries)) // invalid index
+throw IndexOutOfBounds("Invalid index");
+GameEntry e = entries[i]; // save the removed object
+for (int j = i+1; j < numEntries; j++)
+entries[j−1] = entries[j]; // shift entries left
+numEntries−−; // one fewer entry
+return e; // return the removed object
+}
+```
+
+코드를 살펴보면 이런 순서로 실행되고 있다.
+
+1. 배열이 비어있는지 확인한다.
+2. 삭제할 원소를 저장해둔다.
+3. 삭제할 원소의 인덱스 바로 다음 인덱스부터 마지막 원소까지 탐색하며 각 원소의 인덱스를 1씩 줄인다.(왼쪽으로 이동한다.)
+
+삭제 연산에서 주의할 점은 삽입 연산과 다르게 삭제할 원소를 저장해둔 뒤 반환한다는 점이다.
+
+다음으로 배열 내의 원소를 정렬하는 법에 대해서 배운다.
+
+## 삽입 정렬(Insertion Sort)
+
+코드는 다음과 같다.
+
+```c++
+void insertionSort(char* A, int n) { // sort an array of n characters
+    for (int i = 1; i < n; i++) { // insertion loop
+        char cur = A[i]; // current character to insert
+        int j = i − 1; // start at previous character
+        while ((j >= 0) && (A[j] > cur)) { // while A[j] is out of order
+            A[j + 1] = A[j]; // move A[j] right
+            j−−; // decrement j
+        }
+        A[j + 1] = cur; // this is the proper place for cur
+    }
+}
+```
+
+이 코드는 n개의 문자로 이루어진 배열을 순서대로 정렬하는 것이다.
+
+일종의 string이라고 볼 수 있는데 원시형 타입에는 string 같은 것이 없기 때문에 char 배열을 인자로 받는 것이고 **배열의 이름은 배열의 첫 번째 원소의 주소를 가리키는 포인터이다!** 그래서 char* 타입으로 인자를 받았다.
+
+코드의 원리는 이러하다.
+
+1. 배열의 두 번째 원소부터 탐색을 시작한다.
+2. 현재 탐색 중인 원소(i)와 이 원소 바로 이전의 인덱스(j)를 저장한다.
+3. 이전의 인덱스(j)부터 첫 번째 인덱스까지 탐색하여 현재 탐색 중인 원소(i)보다 크면(정렬에 벗어나면) j+1번째 원소를 j번째 원소로 덮어쓴다.(j번째 원소를 오른쪽으로 이동한다.) 이때 while문이 끝나기 직전에 j를 감소시켜 주므로 j+1 번째 자리는 비어있게 되고 이곳이 바로 현재 탐색 중인 원소가 있어야 할 자리가 된다.
+
+## 2차원 배열 (행렬)
+
+사실 원리는 1차원 배열과 같으나 단순히 Array 타입으로 처리하게 되면 복잡해진다. 이때 STL의 Vector를 사용하면 쉬울 수 있는데 int 원소를 가지는 nⅹm 행렬을 Vector로 선언하는 방법은 다음과 같다.
+```c++
+vector<vector<int> > VectorName(n, vector<int>(m));
+```
+
+오늘은 여기까지.... 내일은 연결리스트부터 공부를 시작해야겠다. 실제로 쓰기 편한 것은 연결리스트이고 실제로 요새는 기본 라이브러리에 모두 구현되어 있기는 하지만 원시형은 역시 배열이고 배열의 원리를 알아야 고급 자료 구조를 익히는 데 도움이 된다고 한다. 자료구조 공부를 위한 언어로 C++ 선택한 것은 잘 한 것 같다. 파이썬이었으면 이런 내용까지는 들어가지 못했을 것이다.
