@@ -47,8 +47,9 @@ comments:
     branch: # "master"
     endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey:
-  secret:
+  enabled: true
+  siteKey: "6LehJPMUAAAAADbEPVvh6HsKpNt4vexV79wkBm4h"
+  secret: "6LehJPMUAAAAAGxCczNEcnHB2Jh_fBcmPbpYkdpY"
 atom_feed:
   path: # blank (default) uses feed.xml
 search: false
@@ -79,9 +80,10 @@ og_image: # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type: # Person or Organization (defaults to Person)
+  type: Person
   name: # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links: 
+    - "https://www.linkedin.com/in/hyungil-kang-ab3b19186/"
 
 # Analytics
 analytics:
@@ -100,7 +102,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:tksuns@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://tksuns12.github.com"
