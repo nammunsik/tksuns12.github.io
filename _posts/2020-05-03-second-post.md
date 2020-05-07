@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul]Firebase의 데이터 모델 살펴보기"
-last_modified_at: 2020-05-02T21:22:34-04:00
+last_modified_at: 2020-05-03T21:22:34-04:00
 categories: 
   - Project
 
