@@ -34,7 +34,7 @@ FireStore 자체에 대해서는 아직 많이 모르지만 오늘은 가장 중
 
 모든 Firestore 규칙은 이런 구문으로 시작한다.
 
-```cel
+```
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
@@ -70,3 +70,4 @@ service cloud.firestore {
 또, match 블럭 내에서 문서의 field를 참조하고 싶다면 resource 키워드를 쓰면 된다. 이 resource 키워드는 match 뒤에 나오는 문서 경로의 그 문서를 뜻하고 resource.data.[fieldname] 이런 식으로 문서 내에 필드를 참조할 수 있다.
 
 내일은 데이터베이스 설계를 하고 본격적으로 코딩을 시작해봐야겠다.
+
