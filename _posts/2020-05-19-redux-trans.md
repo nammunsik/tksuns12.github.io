@@ -34,7 +34,7 @@ Redux에서의 아이디어는 앱의 상태를 루트 수준의 싱글톤에 �
 
 이를 위해서는 Redux ```Store```를 만들고 ```StoreProvider```에게 넘겨주어야 합니다. 이렇게 하면 ```StoreProvider```의 모든 후손들은 ```StoreProvider.of(context).store``` 코드를 쓰거나 ```StoreConnector```를 통해 store에 접근할 수 있을 것입니다.
 
-### App State 업데이트 하기
+## App State 업데이트 하기
 
 App State를 업데이트 하기 위해서는 ```Action```을 발송해야 합니다.
 
