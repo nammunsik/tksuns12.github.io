@@ -21,7 +21,7 @@ Redux 관련 글을 3일을 하루 종일 읽어봤는데 읽어보기만 해서
 
 Redux를 간단히 표현한 도표는 다음과 같다.
 
-![Redux](../assets/images/redux.png)
+![Redux](/assets/images/redux.png)
 
 - **View**는 프로그램에서 렌더링된 부분을 말한다. 간단히 말해 유저가 볼 수 있고 상호작용할 수 있는 UI를 말한다. Flutter로 치면 Widget들이라고 할 수 있겠다.
 - **Action**은 **View**에서 어떤 상호작용이 일어났을 때 변화된 state를 가지고 있는 intent이다. Android에서의 intent를 생각해보면 일종의 데이터 전송장치라고 보면 될 것 같다.
