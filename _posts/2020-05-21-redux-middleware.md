@@ -50,4 +50,4 @@ void main() {
 }
 ```
 
-```Middleware```를 쓰기 좋게 만들어 놓은 패키지들도 있다. 기본적인 ```async``` 작업에는 [redux_thunk](https://pub.dartlang.org/packages/redux_thunk)를 쓸 수 있고 ```Stream```을 처리해야 할 때에는 [redux_epics](https://pub.dartlang.org/packages/redux_epics)를 쓰면 된다. 그런데 ```async``` 작업은 이미 기본적인 ```Middleware```로 구현이 쉽게 되기 때문에 redux_thunk는 당분간 쓸 일이 없을 것 같다. 그러나 앱에 ```Stream``` 처리가 필요할 때에는 redux_epics를 쓰는 게 좋긴 할 것 같다. 그러나 외부 라이브러리를 남용하는 것은 리스크를 키울 수 있고 앱의 덩치를 키울 수 있기 때문에 기본 ```Middleware```를 가지고 ```Stream```을 처리할 수 있게 스스로 구현해봐야 할 것 같다.
+```Middleware```를 쓰기 좋게 만들어 놓은 패키지들도 있다. 기본적인 ```async``` 작업에는 [redux_thunk](https://pub.dartlang.org/packages/redux_thunk)를 쓸 수 있고 ```Stream```을 처리해야 할 때에는 [redux_epics](https://pub.dartlang.org/packages/redux_epics)를 쓰면 된다. 그런데 ```async``` 작업은 이미 기본적인 ```Middleware```로 구현이 쉽게 되기 때문에 redux_thunk는 당분간 쓸 일이 없을 것 같다. 
