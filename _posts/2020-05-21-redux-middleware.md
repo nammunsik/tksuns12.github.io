@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul] flutter에서 Redux를 사용하여 비동기 처리하기"
-last_modified_at: 2020-05-21T19:21:37-05:00
+last_modified_at: 2020-05-21T19:21:37+09:00
 categories:
     - Project
 tags:

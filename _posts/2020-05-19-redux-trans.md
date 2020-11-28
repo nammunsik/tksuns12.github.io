@@ -1,6 +1,6 @@
 ---
 title: "Redux란 무엇인가?"
-last_modified_at: 2020-05-19T19:15:00-05:00
+last_modified_at: 2020-05-19T19:15:00+09:00
 category:
     - Project
 

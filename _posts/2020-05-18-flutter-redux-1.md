@@ -1,6 +1,6 @@
 ---
 title: redux, 그리고 flutter에서 redux 사용해보기
-last_modified_at: 2020-05-19T10:04:16-05:00
+last_modified_at: 2020-05-19T10:04:16+09:00
 category: 
     - Project
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul] flutter에서 정규식을 사용해 TextField의 텍스트 검증하기"
-last_modified_at: 2020-05-09T19:46:34-05:00
+last_modified_at: 2020-05-09T19:46:34+09:00
 category: 
     - Project
 tags:

@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul] 자식 위젯에서 부모 위젯 setState 하기"
-last_modified_at: 2020-05-05T19:57:25-05:00
+last_modified_at: 2020-05-05T19:57:25+09:00
 category: 
     - Project
 tags:

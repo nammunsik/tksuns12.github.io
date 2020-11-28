@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul]Flutter에서 await를 initState 함수 내에서 사용하기"
-last_modified_at: 2020-05-04T17:33:14-04:00
+last_modified_at: 2020-05-04T17:33:14+09:00
 categories: 
     - Project
 

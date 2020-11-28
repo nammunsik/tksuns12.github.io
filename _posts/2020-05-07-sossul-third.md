@@ -1,6 +1,6 @@
 ---
 title: "[So.SSul] 위젯이 빌드되기 전 async 함수를 실행시켜 build를 넘어가기"
-last_modified_at: 2020-05-07T01:24:25-05:00
+last_modified_at: 2020-05-07T01:24:25+09:00
 category: 
     - Project
 tags:

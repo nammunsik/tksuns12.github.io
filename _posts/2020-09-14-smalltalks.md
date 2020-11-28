@@ -1,6 +1,6 @@
 ---
 title: "2020 카카오 공채 코딩테스트 예선에 참가하고..."
-last_modified_at: 2020-09-14T19:14:24-05:00
+last_modified_at: 2020-09-14T19:14:24+09:00
 categories:
     - 소소한 이야기
 tags:
