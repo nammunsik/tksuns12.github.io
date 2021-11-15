@@ -53,12 +53,12 @@ tags:
 
 사실 첫 번째 문제는 거의 일어날 수가 없는 것이, SNS에서 발생하는 대부분의(내 생각에는 모든) 쿼리는 노드를 알고 있기 때문이다. 임의 탐색이라고 한다면 사용자의 id를 검색하거나, 태그를 검색하는 경우인 것 같은데 이것은 Elastic Search를 사용하면 해당 탐색들의 시간을 매우 단축할 수 있다. 두 번째 문제는 사실 RDB와 그래프 데이터베이스를 1대1로 비교했을 때의 문제지 이게 수평적 확장이 이루어지는 백엔드에서라면 사실 큰 차이가 나지 않는다고 생각한다. 왜냐하면 어차피 RDB도 수평적 확장이 이루어졌을 때는 Eventual Consistency를 달성할 수밖에 없기 때문에 큰 상관이 없어 보이고 Reliability는 AWS의 그래프 데이터베이스 서비스인 Neptune은 완전관리형 데이터베이스여서 내가 딱히 신경 쓸 부분이 없다. 그래서 메인 DB는 AWS의 Neptune을 사용할 것이다!! 이제 우리 아키텍처 다이어그램에 AWS Neptune이 놓여졌다!
 
-![architecture image](https://github.com/tksuns12/tksuns12.github.io/blob/master/assets/images/IYAGI_Architecture.drawio.png)
+![architecture image](https://raw.githubusercontent.com/tksuns12/tksuns12.github.io/blob/master/assets/images/IYAGI_Architecture.drawio.png)
 
 지금은 완전히 구체적인 수준은 아니고, 어느 정도 추상적인 수준에서의 구상이기 때문에 각종 밸런서라든지, Availability Zone에 관한 문제, 보안 문제 등에 대해서는 다이어그램에 포함시키지 않을 예정이다.  
 어쨌든, Neptune은 외부에서 직접 접근할 수 없으므로 NLB를 통해 접근할 생각이다. 그렇게 되면 다음과 같다.  
 
-![architecture image](https://github.com/tksuns12/tksuns12.github.io/blob/master/assets/images/IYAGI_Architecture_1.drawio.png)
+![architecture image](https://raw.githubusercontent.com/tksuns12/tksuns12.github.io/master/assets/images/IYAGI_Architecture.drawio_1.png)
 
 캐싱 같은 경우에는 Elastic Cache를 쓰는 것보다, Neptune에서 직접 지원하는 캐싱 서비스를 사용하기로 했다. 왜냐하면 Elastic Cache는 key-value 기반의 캐싱밖에 지원하지 않는데 이렇게 되면 페이스북이 맞닥뜨린 문제를 그대로 마주하게 된다. 그래프 형태의 데이터를 어떻게 key-value 형식에 효율적으로 끼워맞춰야 할지에 대해 고민해야 한다는 것이다. 그러나 Neptune 자체에서 지원하는 캐싱을 사용하면 그 부분에 대해서 고민하지 않아도 된다. 그러나 캐싱 설명서를 보면 똑같이 key-value 형식인 것 같기는 하다. 그래도 따로 구현하지 않아도 된다는 점에서 점수를 준다.  
 
