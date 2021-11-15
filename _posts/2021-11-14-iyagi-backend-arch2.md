@@ -58,7 +58,11 @@ tags:
 지금은 완전히 구체적인 수준은 아니고, 어느 정도 추상적인 수준에서의 구상이기 때문에 각종 밸런서라든지, Availability Zone에 관한 문제, 보안 문제 등에 대해서는 다이어그램에 포함시키지 않을 예정이다.  
 어쨌든, Neptune은 외부에서 직접 접근할 수 없으므로 NLB를 통해 접근할 생각이다. 그렇게 되면 다음과 같다.  
 
+<<<<<<< HEAD
 ![architecture image](https://raw.githubusercontent.com/tksuns12/tksuns12.github.io/master/assets/images/IYAGI_Architecture.drawio_1.png)
+=======
+![architecture image](https://github.com/tksuns12/tksuns12.github.io/blob/master/assets/images/IYAGI_Architecture.drawio_1.png)
+>>>>>>> d70af54b96ab2673b0e48aae52003c45a080a7e0
 
 캐싱 같은 경우에는 Elastic Cache를 쓰는 것보다, Neptune에서 직접 지원하는 캐싱 서비스를 사용하기로 했다. 왜냐하면 Elastic Cache는 key-value 기반의 캐싱밖에 지원하지 않는데 이렇게 되면 페이스북이 맞닥뜨린 문제를 그대로 마주하게 된다. 그래프 형태의 데이터를 어떻게 key-value 형식에 효율적으로 끼워맞춰야 할지에 대해 고민해야 한다는 것이다. 그러나 Neptune 자체에서 지원하는 캐싱을 사용하면 그 부분에 대해서 고민하지 않아도 된다. 그러나 캐싱 설명서를 보면 똑같이 key-value 형식인 것 같기는 하다. 그래도 따로 구현하지 않아도 된다는 점에서 점수를 준다.  
 
