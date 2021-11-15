@@ -1,5 +1,5 @@
 ---
-title: "IYAGI Backend Architecture 1"
+title: "IYAGI Backend Architecture I"
 last_modified_at: 2021-11-14T17:57:45+09:00
 categories:
   - Project
