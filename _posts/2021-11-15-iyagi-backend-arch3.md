@@ -12,7 +12,7 @@ tags:
 
 # IYAGI Backend Architecture II
 
-[지난 이야기 (IYAGI Backend Architecture I)](2021-11-14-iyagi-backend-arch2.md)
+[지난 이야기 (IYAGI Backend Architecture I)](https://tksuns12.github.io/project/iyagi-backend-arch2/)
 
 ### 푸시 알림 기능
 
