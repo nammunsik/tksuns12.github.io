@@ -18,7 +18,7 @@ tags:
 
 지난 이야기에서 논의했던 부분들을 다이어그램으로 그리지 않았다. 다이어그램으로 나타낸 지금까지의 아키텍처 구상이다.
 
-![architecturimage](../assets/images/IYAGI%20Architecture.drawio_7.png)
+![architecturimage](../assets/images/IYAGI_Architecture.drawio_7.png)
 
 채팅 서버에서는 기존의 포스트와 그에 첨부된 사진 자체는 아니더라도 썸네일까지는 접근할 수 있어야 하기에 연결된 곳이 많다.
 
